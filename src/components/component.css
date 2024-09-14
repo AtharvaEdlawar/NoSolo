@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+.navBar{
+  height: 50px;
+  background-color: rgb(0 0 0 / 30%);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .navBar > :first-child {
+    padding-left: 50px;
+    font-family: "Oswald", system-ui;
+    background:transparent;
+    margin-right: auto;
+    font-size: x-large;
+    color:white;
+  }
+  .navElement{
+    background:transparent;
+    font-family: "Oswald", system-ui;
+    text-decoration: none;
+    font-size: large;
+    padding-right: 50px;
+    color: white;
+
+  }
+  .hero{
+    flex-wrap: wrap;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    font-size: xx-large;
+  }
+  .hero h1{
+    padding-left: 20px;
+    height: 100px;
+    margin-right: 50px;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    align-self: center;
+  }
+  .hero2{
+    height: 100px;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    align-self: center;
+  }
+  .logo{
+    justify-self: center;
+    align-self: center;
+  }
+  .reto {
+    font-size: large;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    color: #9CA3AF;
+    height: fit-content;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+  }
+  
+  .joinUsButton {
+    margin-top: 50px; 
+    margin-left:40px ;
+    display: inline-block;
+    background: transparent;
+  }
+  
+  .joinUsButton a {
+    font-family: "Roboto", sans-serif;
+    font-size: large;
+    color: #ffff;
+    height: 36px;
+    width: 126px;
+    line-height: 36px;
+    text-decoration: none;
+    background-color:#9333EA;
+    padding: 10px 20px;
+    display: inline-block;
+    text-align: center;
+  }
+.content{
+  padding-top: 220px;
+  color: #ffff;
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+}
+.contentP{
+  align-self: center;
+  justify-content: center;
+  padding-bottom: 300px;
+}
+.contentP h1{
+  font-size: xxx-large;
+  font-family: "Roboto", sans-serif
+}
+
+.contentP p{
+  padding-top: 20px;
+ font-size: x-large;
+ font-family: "Roboto", sans-serif;
+ color: #9CA3AF;
+}
+
+
+.contentImg{
+ width: 576px;
+ height: 842px;
+}
+
+.ticketButton{
+  margin-top: 40px;
+  height: 46px;
+  width: 126px;
+  background-color: #9333EA;
+}
+
+.ticketButton a{
+  font-family: "Roboto", sans-serif;
+  font-size: large;
+  color: #FFFF;
+  text-decoration: none;
+  background-color: #9333EA
+}
+
+.performingArtist{
+  padding-top: 220px;
+  color: #ffff;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+}
+
+.performingArtistImg{
+  height: 568px;
+  width: 568px;
+}
+
+.footer{
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center ;
+  background-color: rgb(0 0 0 / 30%);
+  font-family: "Oswald", system-ui;
+  color:#ffff;
+  height:400px;
+}
+
+
+
+
