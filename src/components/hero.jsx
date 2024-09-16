@@ -1,9 +1,9 @@
 export default function Hero(){
     return <>
     <div className="hero">
-    <h1>We are</h1> 
+    <h1 className="weAre">We are</h1> 
     <img className="logo" src="src\components\logo.png" alt="nosoloLogo" />
-    <h1>Tribe</h1>
+    <h1 className="tribe">Tribe</h1>
     </div>
     <div className="reto">
     <h3>Community for the people by the people ♥️
