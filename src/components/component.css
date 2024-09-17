@@ -16,21 +16,24 @@
     display: none;
   }
   .navBar > :first-child {
+    text-decoration: none;
     padding-left: 50px;
     font-family: "Oswald", system-ui;
     background:transparent;
     margin-right: auto;
     font-size: x-large;
+  }
+  .title{
+    text-decoration: none;
     color:white;
   }
   .navElement{
+    /* text-decoration has been set via inline css i know it  sucks but that is the only way it is inheriting the value so duh; */
     background:transparent;
     font-family: "Oswald", system-ui;
-    text-decoration: none;
     font-size: large;
     padding-right: 50px;
     color: white;
-
   }
   .hero{
     flex-wrap: wrap;
@@ -79,6 +82,7 @@
   }
   
   .joinUsButton a {
+    border-radius: 5px;
     font-family: "Roboto", sans-serif;
     font-size: large;
     color: #ffff;
@@ -124,6 +128,10 @@ flex-wrap: wrap;
 }
 
 .ticketButton{
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  font-size: large;
+  color: #FFFF;
   margin-top: 40px;
   height: 46px;
   width: 126px;
@@ -131,11 +139,21 @@ flex-wrap: wrap;
 }
 
 .ticketButton a{
+  border-radius: 5px;
   font-family: "Roboto", sans-serif;
   font-size: large;
   color: #FFFF;
   text-decoration: none;
-  background-color: #9333EA
+  background-color: #9333EA;
+}
+.pageLink{
+  display: inline-block;
+  padding-top: 20px;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  font-size: large;
+  color: #FFFF;
+  align-self: center;
 }
 
 .performingArtist{
@@ -152,36 +170,100 @@ flex-wrap: wrap;
   width: 568px;
 }
 
-.footer{
-  padding-top: 50px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center ;
+.footer {
+  margin-top: 30px;
+  padding-top: 30px;
+  text-align: center;
   background-color: rgb(0 0 0 / 30%);
   font-family: "Oswald", system-ui;
-  color:#ffff;
-  height:400px;
+  color: #ffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerP {
+  width: 100%;
+  margin-top: 5px;
+  color: #9CA3AF;
+  font-size: large;
+}
+
+.footerDiv {
+  width: 100%;
+  margin-bottom: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+}
+
+.footerButton {
+  margin-top: 50px;
+  display: inline-block;
+  background: transparent;
+}
+
+.footerButton a {
+  
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: large;
+  color: #ffff;
+  height: fit-content;
+  width: 126px;
+  line-height: 36px;
+  background-color: #9333EA;
+  padding: 10px 20px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.socialsA {
+  height: fit-content;
+}
+
+.socialsLogo {
+  height: 40px;
+  margin-left: 10px;
 }
 
 @media(max-width:600px){
 
   .navBar{
-    height: fit-content;
-  }
-  .halloween{
-    position: absolute;
-    left: 0;
-    top: 10px;
+   height:fit-content;
+   overflow: hidden;
+   font-family: "Oswald", system-ui;
   }
 
+
   .boneCrossImg{
-    top:5px;
+    top:0px;
     right: 2px;
     position:absolute;
     display: block;
   }
+  .title{
+    position: absolute;
+    left: 10px;
+    top: 2px;
+  }
+  
   .rightDiv {
-    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    padding-right: 245px;
+    padding-bottom: 15px;
+    gap: 10px;
   }
   .navElement{
     display: none;
@@ -189,10 +271,10 @@ flex-wrap: wrap;
   .navElementActive{
     display:inline-block;
     justify-self: flex-end;
-    padding-right: 40px;
+    padding-right: 55px;
     color: white;
     text-decoration: none;
-    font-family: "Roboto", sans-serif ;
+    font-family: "Oswald", system-ui;
   }
   .weAre{
     margin-left: 35px;
@@ -206,8 +288,8 @@ flex-wrap: wrap;
   .joinUsButton{
     margin-right: 45px;
   }
-
-  .contentP h1{
+  /* ahref has been styled inline */
+.contentP h1{
     margin: 0 10px;
     font-size: x-large;
   }
@@ -216,7 +298,9 @@ flex-wrap: wrap;
     margin: 0 10px;
     margin-bottom: 0;
     font-size: medium;
-  
+  }
+  .pageLink{
+    padding-left: 10px;
   }
 
   .ticketButton{
@@ -233,6 +317,40 @@ flex-wrap: wrap;
   }
   .content{
     height: fit-content;
+  }
+  .footer {
+    margin-top: 20px;
+    padding-top: 20px;
+  }
 
+  .footerDiv {
+    margin-bottom: 100px;
+  }
+
+  .footerP {
+    font-size: medium;
+  }
+
+  .footerButton {
+    margin-top: 30px;
+  }
+
+  .footerButton a {
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px; /* Slightly smaller font size for mobile */
+    color: #ffff;
+    width: 140px; /* Adjust the width to be more balanced on small screens */
+    line-height: 24px; /* Adjust line height */
+    background-color: #9333EA;
+    padding: 10px 0; /* Balanced padding to make the button look even */
+    display: inline-block;
+    text-align: center;
+    border-radius: 5px; /* Add a subtle border radius for a modern look */
+  }
+
+  .socialsLogo {
+    height: 30px;
+    margin-left: 5px;
   }
 }
