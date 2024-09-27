@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const cosplayerSchema = new mongoose.Schema({
-  fullname: { type: String, required: true },
+  fullname: { type: String, required: true , unique:true},
   email: { type: String, required: true },
   phone: { type: String, required: true },
   cosplayCharacter: { type: String, required: true },

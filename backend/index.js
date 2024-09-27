@@ -5,7 +5,7 @@ const multer = require('multer');
 const connectDB = require("./db.js");
 const cosplayerModel = require("./model/cosplayersData.js")
 
-
+const ArtistModel = require("./model/artistData.js");
 
 const app = express();
 app.use(express.json())
@@ -22,6 +22,9 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 connectDB()
+
+
+//******************************************************************COSPLAYER FORM HANDLING *************************************** ********************/
 
 
 
@@ -47,6 +50,48 @@ app.post('/api/submit', upload.single('cosplayImage'), async (req, res) => {
     res.status(201).json({ message: 'Form submitted and data saved to MongoDB!' });
   } catch (error) {
     console.error('Error saving cosplayer data:', error);
+    res.status(500).json({ message: 'Internal Server Error', error: error.message });
+  }
+});
+
+
+
+
+//*********************************************************ARTIST FORM SUBMISSION HANDLING *************************************************************/
+ 
+
+
+
+
+app.post('/api/Artistsubmit', async (req, res) => {
+  try {
+    // Destructure the incoming request data
+    const { fullName, email, phone, bandName, noOfBandMembers, genre, duration, requirement } = req.body;
+
+    // Validate that required fields are not empty
+    if (!fullName || !email || !phone || !bandName || !noOfBandMembers || !genre || !duration) {
+      return res.status(400).json({ message: "All required fields must be filled!" });
+    }
+
+    // Create a new Artist entry (field names match the frontend)
+    const newArtist = new ArtistModel({
+      fullname: fullName,
+      email,
+      phone,
+      bandName,
+      sizeoftheband: noOfBandMembers,
+      genre,
+      duration,
+      requirement
+    });
+
+    // Save the data to MongoDB
+    await newArtist.save();
+
+    // Return success response
+    res.status(201).json({ message: 'Form submitted and data saved to MongoDB!' });
+  } catch (error) {
+    console.error('Error saving Artist data:', error);
     res.status(500).json({ message: 'Internal Server Error', error: error.message });
   }
 });

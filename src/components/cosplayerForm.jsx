@@ -48,9 +48,10 @@ export default function CosplayForm() {
   };
 
   return (
+    <>
     <div className="form-container">
       <form onSubmit={handleSubmit} className="cosplay-form">
-        <h2>Cosplay Event Registration</h2>
+        <h2>Cosplay Registrations</h2>
 
         <div className="form-group">
           <label>Full Name:</label>
@@ -149,5 +150,6 @@ export default function CosplayForm() {
         <button type="submit" className="submit-button">Submit</button>
       </form>
     </div>
+    </>
   );
 }

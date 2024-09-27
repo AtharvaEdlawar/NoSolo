@@ -1,7 +1,4 @@
 
-
-
-
 export default function Footer(){
     return( <>
         <div className="footer">
@@ -11,9 +8,9 @@ export default function Footer(){
             <button className="footerButton" ><a href="https://www.instagram.com/nosolotribe?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Join The Tribe</a></button>
             </div>
             <div className="socials">
-               <a className="socialsA"  href="https://www.instagram.com/nosolotribe?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="> <img className="socialsLogo"  src="src\components\instagram.png" alt=""  href=""/></a>
-               <a className="socialsA" href="nosolotribe@gmail.com"><img className="socialsLogo" src="src\components\email.png" alt=""></img></a>
-                <a className="socialsA"  href="https://x.com/nosolotribe"><img className="socialsLogo"   src="src\components\X.png" alt=""  href="" /></a>
+               <a className="socialsA"  href="https://www.instagram.com/nosolotribe?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="> <img className="socialsLogo"  src="src/components/images/instagram.png" alt=""  href=""/></a>
+               <a className="socialsA" href="nosolotribe@gmail.com"><img className="socialsLogo" src="src/components/images/email.png" alt=""></img></a>
+                <a className="socialsA"  href="https://x.com/nosolotribe"><img className="socialsLogo"   src="src/components/images/X.png" alt=""  href="" /></a>
                
               </div> 
         </div>

@@ -1,4 +1,4 @@
-export default function Content({ shouldRender, header, para, imagesrc, mainDivStyle, imageStyle }) {
+export default function Content({ shouldRender, header, para, imagesrc, mainDivStyle, imageStyle,hrefLink }) {
   return (
     <>
       <div className={mainDivStyle}>
@@ -6,7 +6,7 @@ export default function Content({ shouldRender, header, para, imagesrc, mainDivS
           <h1>{header}</h1>
           <p>{para}</p>
           {shouldRender ? (
-            <a href="" className="pageLink">See Artists</a>
+            <a href={hrefLink} className="pageLink">See Artists</a>
           ) : (
             <button className="ticketButton">
               <a href="">Get Tickets</a>

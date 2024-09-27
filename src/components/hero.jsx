@@ -2,7 +2,7 @@ export default function Hero(){
     return <>
     <div className="hero">
     <h1 className="weAre">We are</h1> 
-    <img className="logo" src="src\components\logo.png" alt="nosoloLogo" />
+    <img className="logo" src="src/components/images/logo.png" alt="nosoloLogo" />
     <h1 className="tribe">Tribe</h1>
     </div>
     <div className="reto">

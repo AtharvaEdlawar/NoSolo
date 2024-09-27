@@ -14,7 +14,7 @@ export default function Navbar() {
       <div className="navBar">
         <div className='leftDiv'>
         <Link className='title' to={"/"}>Halloween4.0</Link>
-        <img className='boneCrossImg' src={Navbar?"src/components/boneCross.png":"src/components/gone.png"} alt="" onClick={toggle} />
+        <img className='boneCrossImg' src={Navbar?"src/components/images/boneCross.png":"src/components/images/gone.png"} alt="" onClick={toggle} />
         </div>
         <div className='rightDiv'>
         <Link style={{textDecoration:'none'}} className={Navbar ?"navElementActive":"navElement"} to="/cosplayers">Cosplayers</Link>
