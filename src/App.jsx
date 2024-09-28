@@ -1,6 +1,6 @@
 import Navbar from "./components/Navbar";
 import Footer from "./components/footer";
-import Home from "./components/pages/home";
+import Home from  './components/pages/Home';
 import Cosplayers from "./components/pages/cosplayers"
 import Artists from "./components/pages/Artists";
 import Aboutus from "./components/pages/About";

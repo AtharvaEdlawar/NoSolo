@@ -1,7 +1,6 @@
 const express =  require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const multer = require('multer');
 const connectDB = require("./db.js");
 const cosplayerModel = require("./model/cosplayersData.js")
 
@@ -9,7 +8,6 @@ const ArtistModel = require("./model/artistData.js");
 
 const app = express();
 app.use(express.json())
-const upload = multer({dest: 'uploads/'})
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
@@ -28,10 +26,16 @@ connectDB()
 
 
 
-app.post('/api/submit', upload.single('cosplayImage'), async (req, res) => {
+app.post('/api/submit', async (req, res) => {
   try {
     const { fullname, email, phone, cosplayCharacter, hasCosplayedBefore, favouriteAnimeCharacter } = req.body;
-    const cosplayImage = req.file ? req.file.path : null; // Save the file path
+
+    // Check if a user with the same email or phone number already exists
+    const existingCosplayer = await cosplayerModel.findOne({ $or: [{ email }, { phone }] });
+
+    if (existingCosplayer) {
+      return res.status(409).json({ message: 'Cosplayer with this email or phone number already exists.' });
+    }
 
     // Create a new cosplayer entry
     const newCosplayer = new cosplayerModel({
@@ -40,8 +44,7 @@ app.post('/api/submit', upload.single('cosplayImage'), async (req, res) => {
       phone,
       cosplayCharacter,
       hasCosplayedBefore,
-      favouriteAnimeCharacter,
-      cosplayImage
+      favouriteAnimeCharacter
     });
 
     // Save the data to MongoDB
@@ -52,7 +55,7 @@ app.post('/api/submit', upload.single('cosplayImage'), async (req, res) => {
     console.error('Error saving cosplayer data:', error);
     res.status(500).json({ message: 'Internal Server Error', error: error.message });
   }
-});
+})
 
 
 
@@ -67,11 +70,12 @@ app.post('/api/Artistsubmit', async (req, res) => {
   try {
     // Destructure the incoming request data
     const { fullName, email, phone, bandName, noOfBandMembers, genre, duration, requirement } = req.body;
+    const existingArtist = await ArtistModel.findOne({ $or: [{ email }, { phone }] });
 
-    // Validate that required fields are not empty
-    if (!fullName || !email || !phone || !bandName || !noOfBandMembers || !genre || !duration) {
-      return res.status(400).json({ message: "All required fields must be filled!" });
+    if (existingArtist) {
+      return res.status(409).json({ message: 'Artist with this email or phone number already exists.' });
     }
+   
 
     // Create a new Artist entry (field names match the frontend)
     const newArtist = new ArtistModel({

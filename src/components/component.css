@@ -497,7 +497,7 @@ color: #9CA3AF
 }
 
 .timeline-event .event-content {
-  font-size: large;
+  font-size: x-large;
   text-align: center;
   background-color: rgb(0 0 0 / 30%); 
   padding: 15px;
@@ -518,6 +518,7 @@ color: #9CA3AF
 }
 
 .timeline-event p {
+  font-size: x-large;
   color: #9CA3AF;
   margin: 5px 0;
 }
@@ -652,4 +653,32 @@ z-index: 2;
   color: white;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: xx-large;
+}
+
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Move down slightly */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Move back to original position */
+  }
+}
+.fade-in {
+  opacity: 0; /* Start invisible */
+  animation: fadeIn 0.8s ease forwards; /* Animate with ease-in effect */
+}
+
+/* Optional: Add a delay for different elements */
+.fade-in-delay-1 {
+  animation-delay: 0.2s; /* Slight delay for the first element */
+}
+.fade-in-delay-2 {
+  animation-delay: 0.4s; /* Slight delay for the second element */
+}
+.fade-in-delay-3 {
+  animation-delay: 0.6s; /* Slight delay for the third element */
 }

@@ -3,7 +3,7 @@ export default function Content({ shouldRender, header, para, imagesrc, mainDivS
     <>
       <div className={mainDivStyle}>
         <div className="contentP">
-          <h1>{header}</h1>
+          <h1 >{header}</h1>
           <p>{para}</p>
           {shouldRender ? (
             <a href={hrefLink} className="pageLink">See Artists</a>
