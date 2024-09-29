@@ -9,6 +9,7 @@
     position: fixed;
     width: 100%;
     flex-wrap: wrap;
+    z-index: 3;
   }
   .boneCrossImg{
     height: 50px;
