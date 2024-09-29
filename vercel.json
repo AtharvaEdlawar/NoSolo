@@ -1,0 +1,24 @@
+{
+    "routes":[
+        {
+            "src":"/",
+            "dest": "/"
+        },
+        {
+           "src":"/cosplayers",
+            "dest": "/"
+        },
+        {
+            "src":"/artist",
+             "dest": "/"
+         },
+         {
+            "src":"/about",
+             "dest": "/"
+         },
+         {
+            "src":"/tickets",
+             "dest": "/"
+         }
+    ]
+}
