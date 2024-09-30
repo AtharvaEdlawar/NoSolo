@@ -6,9 +6,9 @@ export default function Hero(){
     <h1 className="tribe">Tribe</h1>
     </div>
     <div className="reto">
-    <h3>Community for the people by the people ♥️
+    <h3>Community for the people by the people 
 Anime | Gaming | Cosplay | Events
-Club based in Nagpur but is open for whole India 🇮🇳</h3>
+Club based in Nagpur but is open for whole India </h3>
 <button className="joinUsButton" ><a href="https://www.instagram.com/nosolotribe?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Join us</a></button>
 </div>
     </>
