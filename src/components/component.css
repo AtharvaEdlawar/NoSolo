@@ -80,6 +80,7 @@
     margin-left:40px ;
     display: inline-block;
     background: transparent;
+    height: auto;
   }
   
   .joinUsButton a {
@@ -87,9 +88,7 @@
     font-family: "Roboto", sans-serif;
     font-size: large;
     color: #ffff;
-    height: 36px;
-    width: 126px;
-    line-height: 36px;
+    width: 8.1em;
     text-decoration: none;
     background-color:#9333EA;
     padding: 10px 20px;
@@ -215,19 +214,16 @@ flex-wrap: wrap;
 }
 
 .footerButton a {
-  
-  text-decoration: none;
-  font-family: "Roboto", sans-serif;
-  font-size: large;
-  color: #ffff;
-  height: fit-content;
-  width: 126px;
-  line-height: 36px;
-  background-color: #9333EA;
-  padding: 10px 20px;
-  display: inline-block;
-  text-align: center;
   border-radius: 5px;
+    font-family: "Roboto", sans-serif;
+    font-size: large;
+    color: #ffff;
+    width: 8.1em;
+    text-decoration: none;
+    background-color:#9333EA;
+    padding: 10px 20px;
+    display: inline-block;
+    text-align: center;
 }
 
 .socials {
@@ -245,6 +241,11 @@ flex-wrap: wrap;
   margin-left: 10px;
 }
 
+@media(max-width:985px){
+  .logo{
+    width: 290px;
+  }
+}
 /* **********************************************************************HOMEPAGE LAYOUT AND HOMEPAGE RESPONSVIE LAYOUT****************************************************** */
 @media(max-width:600px){
 
@@ -272,16 +273,15 @@ flex-wrap: wrap;
   .rightDiv {
     display: flex;
     flex-direction: column;
-    padding-top: 60px;
-    padding-right: 245px;
+    padding-top: 3.75em;
+    padding-right: 17.3em;
     padding-bottom: 15px;
-    gap: 10px;
+    gap: 10px; 
   }
   .navElement{
     display: none;
   }
   .navElementActive{
-    padding-right: 4.3em;
     color: white;
     text-decoration: none;
     font-family: "Oswald", system-ui;
@@ -305,8 +305,9 @@ flex-wrap: wrap;
   .joinUsButton{
     margin-right: 45px;
   }
-  .content{
 
+  .weAre{
+    color: yellow;
   }
   .contentP{
     padding-left: 10px;
@@ -646,10 +647,7 @@ z-index: 2;
     right:0px;
   }
   .aboutUsHero h1{
-     position: absolute;
-    top:100px;
-    left: 50px;
-    padding-bottom: 1--;
+  width: 9.5em;
   }
   .aboutUsReto{
     padding-top: 60px;
