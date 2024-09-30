@@ -281,6 +281,9 @@ flex-wrap: wrap;
   .weAre{
     margin-left: 35px;
   }
+  .logo{
+    width: 290px;
+  }
   .tribe{
     margin-left: 35px;
   }
@@ -308,10 +311,15 @@ flex-wrap: wrap;
   }
 
   .ticketButton{
-    margin-left: 120px;
+    width: 27%;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  .ticketButton a{
+    font-size: medium;
   }
   .contentImg{
-    margin-bottom: 70px ;
+    padding-top: 25px;
     width: 300px;
     height: 400px;
   }
@@ -402,8 +410,7 @@ flex-wrap: wrap;
 
 .form-group input[type="text"],
 .form-group input[type="email"],
-.form-group input[type="tel"],
-.form-group input[type="file"] {
+.form-group input[type="tel"]{
   color: White;
   width: 96%;
   padding: 8px;
@@ -431,6 +438,13 @@ flex-wrap: wrap;
   background-color: #45a049;
 }
 
+@media (max-width:600px){
+  .form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"]{
+  width: 95%;
+}
+}
 
 /***************************************************************************ABOUT US PAGE STYLING ***************************************************************************************/
  
@@ -514,7 +528,7 @@ color: #9CA3AF
 .timeline-event img {
   height: fit-content;
   width: 100%;
-  max-width: 550px;
+  max-width: 600px;
   margin: 10px;
 }
 
