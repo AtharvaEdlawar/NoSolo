@@ -10,7 +10,8 @@ export default function Cosplayers() {
     phone: '',
     cosplayCharacter: '',
     hasCosplayedBefore: '',
-    favouriteAnimeCharacter: ''
+    favouriteAnimeCharacter: '',
+    paymentCosplayers:''
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);  // To track successful submission
@@ -133,6 +134,20 @@ export default function Cosplayers() {
                   value={formData.favouriteAnimeCharacter}
                   onChange={handleChange} 
                   required 
+                />
+              </div>
+              <div className='form-group'>
+                <label> Kindly Pay 200Rs as Cosplay registration fee on the QR given below</label>
+                <img src="/images/qrCode.png" alt="qrCode image"/>
+              </div>
+
+              <div className='form-group'>
+              <label>Name of the Account through which payment was made</label>
+              <input type="text"
+                name="paymentCosplayers"
+                value={formData.paymentCosplayers}
+                onChange={handleChange}
+                required
                 />
               </div>
 

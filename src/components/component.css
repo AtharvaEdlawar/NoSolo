@@ -36,65 +36,20 @@
     padding-right: 50px;
     color: white;
   }
-  .hero{
-    flex-wrap: wrap;
-    margin-top: 100px;
+  
+  .halloweenHero{
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
-    font-size: xx-large;
+    align-items: center;
   }
-  .hero h1{
-    padding-left: 20px;
-    height: 100px;
-    margin-right: 50px;
-    color: white;
-    font-family: "Roboto", sans-serif;
-    align-self: center;
-  }
-  .hero2{
-    height: 100px;
-    max-width: 877px;
-    color: white;
-    font-family: "Roboto", sans-serif;
-    align-self: center;
-    flex-wrap: wrap;
-  }
-  .logo{
-    justify-self: center;
-    align-self: center;
-  }
-  .reto {
-    font-size: large;
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    color: #9CA3AF;
-    height: fit-content;
-    font-family: "Roboto", sans-serif;
-    text-align: center;
+
+  .halloweenimg{
+    width:100%;
+    height: 950px;
   }
   
-  .joinUsButton {
-    margin-top: 50px; 
-    margin-left:40px ;
-    display: inline-block;
-    background: transparent;
-    height: auto;
-  }
-  
-  .joinUsButton a {
-    border-radius: 5px;
-    font-family: "Roboto", sans-serif;
-    font-size: large;
-    color: #ffff;
-    width: 8.1em;
-    text-decoration: none;
-    background-color:#9333EA;
-    padding: 10px 20px;
-    display: inline-block;
-    text-align: center;
-  }
 .content{
   padding-top: 220px;
   color: #ffff;
@@ -249,42 +204,54 @@ flex-wrap: wrap;
 /* **********************************************************************HOMEPAGE LAYOUT AND HOMEPAGE RESPONSVIE LAYOUT****************************************************** */
 @media(max-width:600px){
 
-  .navBar{
+  .navBar {
+    height: fit-content;
     background-color: transparent;
-   height:fit-content;
-   overflow: hidden;
-   font-family: "Oswald", system-ui;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensure content is spaced out */
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    padding: 0.5em 1em; /* Use padding instead of hard-coded pixel values */
   }
-
-
-  .boneCrossImg{
-    top:0px;
-    right: 2px;
-    position:absolute;
+  
+  .boneCrossImg {
+    position: absolute;
+    top: 0.5em; /* Keep consistent top spacing */
+    right: 1em; /* Align to the right */
+    height: 50px;
+    width: 50px;
     display: block;
   }
-  .title{
+  
+  .title {
     font-size: large;
     position: absolute;
     left: 1em;
-    top: 0.5em;
+    top: 1.4em;
   }
   
   .rightDiv {
     display: flex;
     flex-direction: column;
-    padding-top: 3.75em;
-    padding-right: 17.3em;
-    padding-bottom: 15px;
-    gap: 10px; 
+    align-items: flex-end; /* Ensure items align to the right */
+    padding-top: 4em;
+    padding-right: 1em; /* Adjust padding for responsiveness */
+    gap: 10px;
   }
-  .navElement{
+  
+  .navElement {
     display: none;
   }
-  .navElementActive{
+  
+  .navElementActive {
+    display: block; /* Show the active state element */
     color: white;
     text-decoration: none;
+    font-size: medium;
     font-family: "Oswald", system-ui;
+    padding: 0.1em 1em; /* Consistent padding for better touch area */
   }
   .weAre{
     margin-left: 35px;
@@ -461,13 +428,74 @@ flex-wrap: wrap;
 }
 
 /***************************************************************************ABOUT US PAGE STYLING ***************************************************************************************/
- 
+.hero{
+  flex-wrap: wrap;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  font-size: xx-large;
+}
+.hero h1{
+  padding-left: 20px;
+  height: 100px;
+  margin-right: 50px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  align-self: center;
+}
+.hero2{
+  height: 100px;
+  max-width: 877px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  align-self: center;
+  flex-wrap: wrap;
+}
+.logo{
+  justify-self: center;
+  align-self: center;
+}
+.reto {
+  font-size: large;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  color: #9CA3AF;
+  height: fit-content;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+
+.joinUsButton {
+  margin-top: 50px; 
+  margin-left:40px ;
+  display: inline-block;
+  background: transparent;
+  height: auto;
+}
+
+.joinUsButton a {
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  font-size: large;
+  color: #ffff;
+  width: 8.1em;
+  text-decoration: none;
+  background-color:#9333EA;
+  padding: 10px 20px;
+  display: inline-block;
+  text-align: center;
+}
+
+
 .aboutUsHero{
+
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 100px;
+  padding: 200px;
   color: white;
 }
 .aboutUsReto{
@@ -540,8 +568,8 @@ color: #9CA3AF
 }
 
 .timeline-event img {
-  height: fit-content;
   width: 100%;
+  height: auto;
   max-width: 600px;
   margin: 10px;
 }
@@ -590,6 +618,7 @@ color: #9CA3AF
   position: relative;
   clear: both;
   width: 100%;
+  height: auto;
   text-align: center;
   margin-top: 50px;
   z-index: 2; /* Ensure last event is above the line */
@@ -686,32 +715,4 @@ z-index: 2;
   color: white;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: xx-large;
-}
-
-
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px); /* Move down slightly */
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0); /* Move back to original position */
-  }
-}
-.fade-in {
-  opacity: 0; /* Start invisible */
-  animation: fadeIn 0.8s ease forwards; /* Animate with ease-in effect */
-}
-
-/* Optional: Add a delay for different elements */
-.fade-in-delay-1 {
-  animation-delay: 0.2s; /* Slight delay for the first element */
-}
-.fade-in-delay-2 {
-  animation-delay: 0.4s; /* Slight delay for the second element */
-}
-.fade-in-delay-3 {
-  animation-delay: 0.6s; /* Slight delay for the third element */
 }

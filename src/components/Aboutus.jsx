@@ -1,5 +1,6 @@
 import React from "react";
 
+
 export default function Timeline ({ events }) {
   return (
     <div className="timeline-container">

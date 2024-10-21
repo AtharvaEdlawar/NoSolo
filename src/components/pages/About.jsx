@@ -1,5 +1,4 @@
 import Timeline from "../Aboutus";
-
 export default function Aboutus(){
     const events = [
         {

@@ -28,7 +28,7 @@ connectDB()
 
 app.post('/api/submit', async (req, res) => {
   try {
-    const { fullname, email, phone, cosplayCharacter, hasCosplayedBefore, favouriteAnimeCharacter } = req.body;
+    const { fullname, email, phone, cosplayCharacter, hasCosplayedBefore, favouriteAnimeCharacter, paymentCosplayers } = req.body;
 
     // Check if a user with the same email or phone number already exists
     const existingCosplayer = await cosplayerModel.findOne({ $or: [{ email }, { phone }] });
@@ -44,13 +44,14 @@ app.post('/api/submit', async (req, res) => {
       phone,
       cosplayCharacter,
       hasCosplayedBefore,
-      favouriteAnimeCharacter
+      favouriteAnimeCharacter,
+      paymentCosplayers
     });
 
     // Save the data to MongoDB
     await newCosplayer.save();
 
-    res.status(201).json({ message: 'Form submitted and data saved to MongoDB!' });
+    res.status(201).json({ message: 'Form submitted and data saved to MongoDB!' ,});
   } catch (error) {
     console.error('Error saving cosplayer data:', error);
     res.status(500).json({ message: 'Internal Server Error', error: error.message });

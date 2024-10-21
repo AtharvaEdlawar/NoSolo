@@ -7,6 +7,7 @@ const cosplayerSchema = new mongoose.Schema({
   cosplayCharacter: { type: String, required: true },
   hasCosplayedBefore: { type: String, required: true },
   favouriteAnimeCharacter: { type: String, required: true },
+  paymentCosplayers: {type: String,required:true}
 });
 
 const Cosplayer = mongoose.model('Cosplayer', cosplayerSchema);
