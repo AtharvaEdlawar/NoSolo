@@ -9,7 +9,7 @@ export default function Footer(){
             </div>
             <div className="socials">
                <a className="socialsA"  href="https://www.instagram.com/nosolotribe?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="> <img className="socialsLogo"  src="/images/instagram.png" alt=""  href=""/></a>
-               <a className="socialsA" href="nosolotribe@gmail.com"><img className="socialsLogo" src="/images/email.png" alt=""></img></a>
+               <a className="socialsA" href="mailto:nosolotribe@gmail.com"><img className="socialsLogo" src="/images/email.png" alt=""></img></a>
                 <a className="socialsA"  href="https://x.com/nosolotribe"><img className="socialsLogo"   src="/images/X.png" alt=""  href="" /></a>
                
               </div> 

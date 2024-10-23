@@ -67,7 +67,7 @@ export default function Aboutus(){
         <div className="timeline-event lastElement">
             <h2>Current Event</h2>
             <p> 31-10-2023</p>
-            <img src="/images/halloween4.0.png" alt="Current Event" />
+            <img src="/images/poster.jpg" alt="Current Event" />
             <p>Halloween - Glitch Night, the most anticipated neon-lit, futuristic dystopian party of the year! This cyberpunk-themed extravaganza promises a night like no other with a massive cosplay competition boasting a hefty prize pool, electrifying performances by bands, singers, dancers, and top DJs. Explore the diverse stalls featuring small businesses and indulge in delicious food and snacks. With last year's 9k attendees already buzzing in excitement, this year’s event is set to be even bigger and better.</p>
           </div>
           </div>

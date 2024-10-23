@@ -96,8 +96,18 @@ flex-wrap: wrap;
   font-size: large;
   color: #FFFF;
   margin-top: 40px;
-  height: 46px;
-  width: 126px;
+  height: 3em;
+  width: 150px;
+  background-color: #9333EA;
+}
+.contentButton{
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  font-size: large;
+  color: #FFFF;
+  margin-top: 40px;
+  height: 3em;
+  width: 150px;
   background-color: #9333EA;
 }
 
@@ -109,10 +119,19 @@ flex-wrap: wrap;
   text-decoration: none;
   background-color: #9333EA;
 }
+
+.contentButton{
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  font-size: large;
+  color: #FFFF;
+  margin-top: 40px;
+  height: 3em;
+  width: 150px;
+  background-color: #9333EA;
+}
 .pageLink{
-  display: inline-block;
-  padding-top: 20px;
-  font-weight: bold;
+  text-decoration: none;
   font-family: "Roboto", sans-serif;
   font-size: large;
   color: #FFFF;
@@ -272,14 +291,13 @@ flex-wrap: wrap;
   .joinUsButton{
     margin-right: 45px;
   }
-
-  .weAre{
-    color: yellow;
+  .content{
+    padding-top: 100px;
   }
   .contentP{
     padding-left: 10px;
     padding-right: 5px;
-    height: 50px;
+    height: 350px; /*responsible for content spacing bettwen the para and the image */
     overflow-y: hidden;
   }
 .contentP h1{
@@ -288,20 +306,24 @@ flex-wrap: wrap;
   }
   .contentP p{
     margin: 0 10px;
-    margin-bottom: 0;
     font-size: medium;
+  }
+  .contentI{
+    margin-top: 20px;
   }
   .pageLink{
     padding-left: 10px;
   }
 
   .ticketButton{
-    width: 27%;
+    z-index: 2;
+    width: 46%;
     margin-left: 10px;
     margin-top: 10px;
   }
   .ticketButton a{
     font-size: medium;
+    text-align: start;
   }
   .contentImg{
     margin-top: 45px;
@@ -418,6 +440,33 @@ flex-wrap: wrap;
 .submit-button:hover {
   background-color: #45a049;
 }
+.cosplay-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  max-width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.cosplay-container h2 {
+  margin: 20px 0;
+}
+
+.cosplay-container ol {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  list-style-position: inside;
+  text-align: left;
+  display: inline-block;
+  margin: 0px;
+  padding: 20px;
+}
+.cosplay-container ol li {
+  margin-bottom: 15px; /* Adds space between points */
+}
 
 @media (max-width:600px){
   .form-group input[type="text"],
@@ -425,6 +474,8 @@ flex-wrap: wrap;
 .form-group input[type="tel"]{
   width: 95%;
 }
+
+
 }
 
 /***************************************************************************ABOUT US PAGE STYLING ***************************************************************************************/

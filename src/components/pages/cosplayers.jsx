@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
- const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 export default function Cosplayers() {
   const [formData, setFormData] = useState({
@@ -11,7 +11,7 @@ export default function Cosplayers() {
     cosplayCharacter: '',
     hasCosplayedBefore: '',
     favouriteAnimeCharacter: '',
-    paymentCosplayers:''
+    paymentCosplayers: ''
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);  // To track successful submission
@@ -49,7 +49,7 @@ export default function Cosplayers() {
     <>
       <div className="form-container">
         <form onSubmit={handleSubmit} className="cosplay-form">
-          <h2>{isSubmitted ? "Your registration form has been submitted!" : "Cosplay Registrations"}</h2>
+          <h2>Cosplay Registrations</h2>
 
           {error && <p className="error-message" style={{ color: 'red' }}>{error}</p>}
 
@@ -151,9 +151,27 @@ export default function Cosplayers() {
                 />
               </div>
 
-              <button type="submit" className="submit-button">Submit</button>
+              <button type="submit" className="submit-button" disabled={isSubmitted}>
+                {isSubmitted ? "Your registration form has been submitted!" : "Submit"}
+              </button>
             </>
         </form>
+      </div>
+
+      <div className="cosplay-container">
+        {/* <h2>Cosplay Fees = 200/- tell us the number and name you're going to pay with.</h2> */}
+        <h2>Your 200/- comprises of:</h2>
+        <ol>
+          <li>Cash prize pool</li>
+          <li>Entry Fee</li>
+          <li>Red Carpet and Massive Backstage area</li>
+          <li>Professional Photo and Videography</li>
+          <li>Personalised Gift Hampers for everyone, Exclusive Merches, and discount coupons</li>
+          <li>Separate Changing Rooms and washrooms for males and females</li>
+          <li>Cosplay secrecy and safety is our first priority</li>
+          <li>Cosplay Doctors and volunteers for cosplayers</li>
+          <li>Refreshments are covered</li>
+        </ol>
       </div>
     </>
   );

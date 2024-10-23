@@ -1,3 +1,5 @@
+import { button } from "framer-motion/client"
+
 export default function Content({ shouldRender, header, para, imagesrc, mainDivStyle, imageStyle,hrefLink,linkName }) {
   return (
     <>
@@ -6,10 +8,10 @@ export default function Content({ shouldRender, header, para, imagesrc, mainDivS
           <h1 >{header}</h1>
           <p>{para}</p>
           {shouldRender ? (
-            <a href={hrefLink} className="pageLink">{linkName}</a>
+           <button className="contentButton"> <a href={hrefLink} className="pageLink">{linkName}</a> </button> //No longer in use can be used to add hightlighted links instead of button set shouldRender to true for use
           ) : (
             <button className="ticketButton">
-              <a href="">Get Tickets</a>
+              <a href={hrefLink}>{linkName}</a>
             </button>
           )}
         </div>
