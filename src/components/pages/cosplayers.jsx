@@ -138,7 +138,7 @@ export default function Cosplayers() {
               </div>
               <div className='form-group'>
                 <label> Kindly Pay 200Rs as Cosplay registration fee on the QR given below</label>
-                <img src="/images/qrCode.png" alt="qrCode image"/>
+                <img className='qrImg' src="/images/qrCode.png" alt="qrCode image"/>
               </div>
 
               <div className='form-group'>

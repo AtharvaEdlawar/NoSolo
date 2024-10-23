@@ -474,6 +474,10 @@ flex-wrap: wrap;
 .form-group input[type="tel"]{
   width: 95%;
 }
+.qrImg{
+  height: 300px;
+  width: 300px;
+}
 
 
 }
