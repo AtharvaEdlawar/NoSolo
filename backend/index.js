@@ -70,7 +70,7 @@ app.post('./api/submit', async (req, res) => {
 
 
 
-app.post('/api/Artistsubmit', async (req, res) => {
+app.post('./api/Artistsubmit', async (req, res) => {
   try {
     // Destructure the incoming request data
     const { fullName, email, phone, bandName, noOfBandMembers, genre, duration, requirement } = req.body;
