@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
 const corsOptions = {
-    origin: '*',
+    origin: 'https://no-solo.vercel.app/',
     credentials: true,
     optionSuccessStatus: 200,
 };
@@ -28,7 +28,7 @@ app.get("/",(req,res)=>{
   res.send("Hello");
 })
 
-app.post('/api/submit', async (req, res) => {
+app.post('./api/submit', async (req, res) => {
   try {
     
     const { fullname, email, phone, cosplayCharacter, hasCosplayedBefore, favouriteAnimeCharacter, paymentCosplayers } = req.body;
