@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
 const corsOptions = {
-    origin: 'https://no-solo.vercel.app/',
+    origin: '',
     credentials: true,
     optionSuccessStatus: 200,
 };
@@ -25,7 +25,7 @@ connectDB()
 //******************************************************************COSPLAYER FORM HANDLING *************************************** ********************/
 
 app.get("/",(req,res)=>{
-  res.json("Hello");
+  res.send("Hello");
 })
 
 app.post('/api/submit', async (req, res) => {
