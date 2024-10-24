@@ -28,6 +28,7 @@ connectDB()
 
 app.post('/api/submit', async (req, res) => {
   try {
+    
     const { fullname, email, phone, cosplayCharacter, hasCosplayedBefore, favouriteAnimeCharacter, paymentCosplayers } = req.body;
 
     // Check if a user with the same email or phone number already exists
