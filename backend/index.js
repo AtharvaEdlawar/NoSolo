@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
 const corsOptions = {
-    origin: '*',
+    origin: 'https://no-solo.vercel.app/',
     credentials: true,
     optionSuccessStatus: 200,
 };
