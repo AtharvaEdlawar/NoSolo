@@ -28,7 +28,7 @@ app.get("/",(req,res)=>{
   res.json("Hello");
 })
 
-app.post('/api/submit', async (req, res) => {
+app.post('https://no-solo.vercel.app/api/submit', async (req, res) => {
   try {
     
     const { fullname, email, phone, cosplayCharacter, hasCosplayedBefore, favouriteAnimeCharacter, paymentCosplayers } = req.body;
