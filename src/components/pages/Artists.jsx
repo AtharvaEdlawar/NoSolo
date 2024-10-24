@@ -25,7 +25,7 @@ export default function Artist() {
     e.preventDefault();
     
     // Directly send the artistData as a JSON object
-    axios.post(`https://no-solo-ebda.vercel.app/api/artistsubmit`, artistData, {
+    axios.post(`https://no-solo-ebda.vercel.app/api/Artistsubmit`, artistData, {
         headers: {
           "Content-Type": "application/json",
         },
