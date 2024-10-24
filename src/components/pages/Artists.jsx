@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
+
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
+
 export default function Artist() {
   const [artistData, setArtistData] = useState({
     fullName: "",
@@ -25,8 +28,7 @@ export default function Artist() {
     e.preventDefault();
     
     // Directly send the artistData as a JSON object
-    axios
-      .post(`${API_BASE_URL}/api/Artistsubmit`, artistData, {
+    axios.post(`./api/Artistsubmit`, artistData, {
         headers: {
           "Content-Type": "application/json",
         },
