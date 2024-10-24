@@ -72,6 +72,7 @@ app.post('./api/submit', async (req, res) => {
 
 app.post('./api/Artistsubmit', async (req, res) => {
   try {
+    res.send("hello world")
     // Destructure the incoming request data
     const { fullName, email, phone, bandName, noOfBandMembers, genre, duration, requirement } = req.body;
     const existingArtist = await ArtistModel.findOne({ $or: [{ email }, { phone }] });
