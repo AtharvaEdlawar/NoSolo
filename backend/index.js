@@ -24,7 +24,9 @@ connectDB()
 
 //******************************************************************COSPLAYER FORM HANDLING *************************************** ********************/
 
-
+app.get("/",(req,res)=>{
+  res.json("Hello");
+})
 
 app.post('/api/submit', async (req, res) => {
   try {

@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ;
-
 export default function Cosplayers() {
   const [formData, setFormData] = useState({
     fullname: '',
@@ -21,11 +19,10 @@ export default function Cosplayers() {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    axios.post(`${API_BASE_URL}/api/submit`, formData, {
+    axios.post(`https://nosolo-backend-5krw.vercel.app/api/submit`, formData, {
       headers: {
         'Content-Type': 'application/json',
       },
