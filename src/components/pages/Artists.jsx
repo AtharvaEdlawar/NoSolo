@@ -29,7 +29,6 @@ export default function Artist() {
         headers: {
           "Content-Type": "application/json",
         },
-        withCredentials: false
       })
       .then((response) => {
         setIsSubmitted(true);
