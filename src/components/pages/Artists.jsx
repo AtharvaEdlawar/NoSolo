@@ -24,7 +24,7 @@ export default function Artist() {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    // Directly send the artistData as a JSON object
+    // Directly send the artistData as a JSON object hahahaha
     axios.post(`https://artist-registration-qxja.vercel.app/api/Artistsubmit`, artistData, {
         headers: {
           "Content-Type": "application/json",
