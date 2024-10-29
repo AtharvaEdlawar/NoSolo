@@ -15,6 +15,8 @@ app.use(bodyParser.urlencoded({extended:true}));
 const corsOptions = {
     origin: '*',
     credentials: true,
+    methods: ['GET', 'POST', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
     optionSuccessStatus: 200,
 };
 
