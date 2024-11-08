@@ -30,7 +30,7 @@ app.get("/",(req,res)=>{
   res.send("Hello");
 })
 
-app.post('./api/submit', async (req, res) => {
+app.post('/api/submit', async (req, res) => {
   res.send("hello world")
   try {
     
