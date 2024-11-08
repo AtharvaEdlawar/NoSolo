@@ -23,7 +23,7 @@ export default function Cosplayers() {
 
     axios.post(`https://no-solo-ebda.vercel.app/api/submit`, formData, {
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'text/plain',
       },
     })
       .then(response => {
