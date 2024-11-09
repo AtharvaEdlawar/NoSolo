@@ -12,14 +12,31 @@
     ],
     "routes": [
       {
-        "src": "/api/(.*)",
-        "dest": "/index.js"
-      },
-      {
-        "handle": "filesystem"
+        "src": "/api/(.*)",    
+        "dest": "index.js"
       },
       {
         "src": "/(.*)",
+        "dest": "src/$1"
+      },
+      {
+        "src": "/cosplayers",    
+        "dest": "/index.html"
+      },
+      {
+        "src": "/artist",
+        "dest": "/index.html"
+      },
+      {
+        "src": "/about",
+        "dest": "/index.html"
+      },
+      {
+        "src": "/tickets",
+        "dest": "/index.html"
+      },
+      {
+        "src": "/(.*)",       
         "dest": "/index.html"
       }
     ]
