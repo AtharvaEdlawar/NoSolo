@@ -1,8 +1,28 @@
 {
-    "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "/Backend/index.js"
-    }
-  ]
-}
+    "routes": [
+      {
+        "src": "/api/(.*)",    
+        "dest": "/Backend/index.js"
+      },
+      {
+        "src": "/cosplayers",    
+        "dest": "/index.html"
+      },
+      {
+        "src": "/artist",
+        "dest": "/index.html"
+      },
+      {
+        "src": "/about",
+        "dest": "/index.html"
+      },
+      {
+        "src": "/tickets",
+        "dest": "/index.html"
+      },
+      {
+        "src": "/(.*)",       
+        "dest": "/index.html"
+      }
+    ]
+  }
