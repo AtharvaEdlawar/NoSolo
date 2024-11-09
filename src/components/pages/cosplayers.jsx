@@ -21,7 +21,7 @@ export default function Cosplayers() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    axios.post(`https://no-solo-ebda.vercel.app/api/submit`, formData, {
+    axios.post(`/api/submit`, formData, {
       headers: {
         'Content-Type': 'application/json',
       },
