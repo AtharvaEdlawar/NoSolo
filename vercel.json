@@ -13,31 +13,15 @@
     ],
     "routes": [
       {
-        "src": "/api/(.*)",    
-        "dest": "index.js"
+        "src": "/api/(.*)",
+        "dest": "/index.js"
       },
       {
         "src": "^/assets/(.*)",
         "dest": "/assets/$1"
       },
       {
-        "src": "/cosplayers",    
-        "dest": "/index.html"
-      },
-      {
-        "src": "/artist",
-        "dest": "/index.html"
-      },
-      {
-        "src": "/about",
-        "dest": "/index.html"
-      },
-      {
-        "src": "/tickets",
-        "dest": "/index.html"
-      },
-      {
-        "src": "/(.*)",       
+        "src": "/(.*)",
         "dest": "/index.html"
       }
     ]
