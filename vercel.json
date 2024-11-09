@@ -2,7 +2,11 @@
     "routes": [
       {
         "src": "/api/(.*)",    
-        "dest": "/Backend/index.js"
+        "dest": "index.js"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "src/$1"
       },
       {
         "src": "/cosplayers",    

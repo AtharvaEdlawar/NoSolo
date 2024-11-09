@@ -21,25 +21,20 @@ export default function Cosplayers() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    axios.post(`/api/submit`, formData, {
-      headers: {
-        'Content-Type': 'application/json',
-      },
+    axios.post('/api/submit', formData)
+    .then(response => {
+      setIsSubmitted(true);
+      setError('');
     })
-      .then(response => {
-        setIsSubmitted(true);
-        setError('');  // Clear any previous error
-      })
-      .catch(error => {
-        if (error.response && error.response.status === 409) {
-          // Set custom error message for duplicate data
-          setError('A cosplayer with this email or phone number already exists.');
-        } else {
-          console.error('Error submitting the form:', error);
-          setError('An error occurred while submitting the form.');
-        }
-      });
-  };
+    .catch(error => {
+      console.error('Error details:', error.response || error);  // Better error logging
+      if (error.response && error.response.status === 409) {
+        setError('A cosplayer with this email or phone number already exists.');
+      } else {
+        setError('An error occurred while submitting the form.');
+      }
+    });
+};
 
   return (
     <>
