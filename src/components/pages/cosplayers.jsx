@@ -21,7 +21,7 @@ export default function Cosplayers() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    axios.post('/api/submit', formData)
+    axios.post('https://no-solo-halloween40-mw9bafd8f-atharva-edlawars-projects.vercel.app/cosplayers/api/submit', formData)
     .then(response => {
       setIsSubmitted(true);
       setError('');

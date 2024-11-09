@@ -16,10 +16,6 @@
         "dest": "index.js"
       },
       {
-        "src": "/(.*)",
-        "dest": "src/$1"
-      },
-      {
         "src": "/cosplayers",    
         "dest": "/index.html"
       },
